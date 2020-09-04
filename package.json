@@ -1,0 +1,14 @@
+{
+  "name": "soul-react-gui",
+  "version": "0.0.1",
+  "description": "A project to test the implementation of React GUI for SOUL.",
+  "main": "index.js",
+  "repository": "https://github.com/JohannesKlauss/soul-react-gui.git",
+  "author": "Johannes Klauss <klauss.johannes@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime-corejs3": "7.11.2",
+    "juce-blueprint": "file:../../../../3rdParty/blueprint/packages/juce-blueprint",
+    "react": "16.13.1"
+  }
+}
