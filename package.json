@@ -8,7 +8,47 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime-corejs3": "7.11.2",
-    "juce-blueprint": "file:../../../../3rdParty/blueprint/packages/juce-blueprint",
+    "juce-blueprint": "file:../Blueprint/packages/juce-blueprint",
     "react": "16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.6",
+    "@babel/plugin-proposal-class-properties": "7.10.4",
+    "@babel/plugin-transform-runtime": "7.11.5",
+    "@babel/preset-env": "7.11.5",
+    "@babel/preset-react": "7.10.4",
+    "@types/react": "^16.9.49",
+    "babel-loader": "8.1.0",
+    "svg-inline-loader": "0.8.2",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "absoluteRuntime": false,
+          "corejs": 3,
+          "helpers": true,
+          "regenerator": true,
+          "useESModules": false,
+          "version": "7.0.0-beta.0"
+        }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties"
+      ]
+    ]
+  },
+  "scripts": {
+    "start": "webpack -w --mode=development",
+    "build": "webpack --mode=production"
   }
 }
